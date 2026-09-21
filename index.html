@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#153f46">
+  <meta name="description" content="Uma pequena aventura de cultivo e filosofia na Grécia Antiga.">
+  <title>Academia Valley</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte opcional: o jogo inteiro funciona também sem internet. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+  <script defer src="js/data/questions.js"></script>
+  <script defer src="js/data/npcs.js"></script>
+  <script defer src="js/game.js"></script>
+</head>
+<body>
+  <main id="app">
+    <header>
+      <span class="brand">ACADEMIA <b>VALLEY</b></span>
+      <nav aria-label="Controles do jogo">
+        <button id="journal">Diário [J]</button>
+        <button id="mute" aria-pressed="false">Som: ligado</button>
+        <button id="menu">Pausar</button>
+      </nav>
+    </header>
+    <section id="hud" aria-label="Estado do jogador">
+      <span id="clock"></span><span id="money"></span><span id="xp"></span>
+    </section>
+    <div id="quest"></div>
+    <section id="stage" aria-label="Vila dos filósofos">
+      <canvas id="world" tabindex="0" aria-label="Mapa. Use WASD ou setas para andar; E para interagir. Consulte o diário para orientações."></canvas>
+      <div id="location"></div>
+      <div id="hint"></div>
+      <div id="toast" role="status" aria-live="polite"></div>
+    </section>
+    <footer>
+      <span id="bag"></span>
+      <span class="desktop">WASD / setas · E conversar · J diário</span>
+    </footer>
+    <section id="touch" aria-label="Controles por toque">
+      <div id="stick" aria-label="Joystick virtual"><div id="knob"></div></div>
+      <span>Explore sem pressa.</span>
+      <button id="interact">Interagir</button>
+    </section>
+  </main>
+  <dialog id="dialog" aria-labelledby="dialogTitle">
+    <div class="dialog-head"><span id="eyebrow">ACADEMIA VALLEY</span><button id="close" aria-label="Fechar janela">×</button></div>
+    <h1 id="dialogTitle"></h1>
+    <div id="dialogBody"></div>
+    <div id="choices"></div>
+  </dialog>
+  <noscript>Ative o JavaScript para jogar Academia Valley.</noscript>
+</body>
+</html>
