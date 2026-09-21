@@ -96,28 +96,3 @@ A sintaxe JavaScript e as regras do jogo foram verificadas por execução automa
 ## Próximas etapas
 
 Os recursos que faltam ao MVP já estão disponíveis na jornada completa. Possíveis versões futuras, fora desta entrega: interiores exploráveis, rotinas de deslocamento dos NPCs, plantio por sementes com crescimento em vários dias e exportação/importação manual do save. Os três minijogos atuais usam diálogos e desafios curtos; a caverna não é um segundo mapa de exploração livre.
-
-## Testar localmente
-
-Extraia o ZIP e abra `index.html` em um navegador moderno. Nenhum comando é necessário. Se o navegador restringir o salvamento em arquivos locais, sirva a pasta com Python:
-
-```bash
-python -m http.server 8000
-```
-
-No Windows, também pode usar `py -m http.server 8000`. Abra `http://localhost:8000` no mesmo computador. Para testar no celular pela mesma rede, abra `http://IP-LOCAL-DO-PC:8000` e, se necessário, permita ao Python acesso à rede privada no firewall.
-
-Confira: movimento e colisões; perguntas nos três níveis; erro sem perda; rega e colheita; entrega; compra; descanso; retomada do save; joystick; diário e minijogos. Use as ferramentas de desenvolvedor para conferir o console.
-
-## Publicar no GitHub Pages
-
-1. Crie um repositório público, por exemplo `academia-valley`.
-2. Extraia o ZIP. Em **Add file > Upload files**, envie `index.html`, `style.css`, `README.md` e a pasta `js`, preservando `js/data`. Não envie só o ZIP nem uma pasta extra envolvendo o projeto.
-3. Confirme os arquivos na branch `main`. O `index.html` deve estar na raiz.
-4. Abra **Settings > Pages**.
-5. Em **Build and deployment > Source**, selecione **Deploy from a branch**.
-6. Selecione a branch **main**, a pasta **/(root)** e clique em **Save**.
-7. Aguarde a publicação e abra o endereço exibido pelo GitHub. Normalmente será `https://SEU-USUARIO.github.io/academia-valley/`.
-8. Para atualizar, substitua os arquivos e faça outro commit em `main`.
-
-A hospedagem usa somente arquivos estáticos; não configure npm ou compilação. [Documentação oficial do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
